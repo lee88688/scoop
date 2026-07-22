@@ -64,3 +64,18 @@ Per the official contributing guide:
 - **Single-item array**: write as a string, not an array.
 - **`architecture`**: mandatory unless the app provides _only_ a 32bit download.
 - **Portable config**: prefer `persist` for user data that should survive updates.
+
+## Push
+
+The `excavator` workflow auto-commits version bumps on GitHub on a schedule, so
+the remote `master` may have advanced since your last fetch. **Always rebase,
+never merge**, to keep a linear history:
+
+```powershell
+git pull --rebase
+git push
+```
+
+If the rebase conflicts (e.g. the excavator bumped the same manifest you also
+edited), resolve by taking the excavator's version for version/hash fields and
+re-running `.\bin\checkver.ps1 <app> -f` to regenerate, then `git rebase --continue`.
