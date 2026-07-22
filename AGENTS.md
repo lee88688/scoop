@@ -65,16 +65,17 @@ Per the official contributing guide:
 - **`architecture`**: mandatory unless the app provides _only_ a 32bit download.
 - **Portable config**: prefer `persist` for user data that should survive updates.
 
-## Pre-commit hook
+## Pre-commit checks
 
-After cloning, enable the trailing-whitespace pre-commit hook once:
+Before committing, run:
 
 ```powershell
-git config core.hooksPath .githooks
+.\bin\formatjson.ps1   # normalize manifest JSON (4-space indent, field order)
+.\bin\test.ps1         # run the Pester suite (needs Pester, BuildHelpers)
 ```
 
-This mirrors the `files have no lines containing trailing whitespace` Pester
-test so trailing-whitespace failures are caught locally instead of in CI.
+The Pester suite includes a `files have no lines containing trailing
+whitespace` test — ensure no staged file has trailing spaces, or CI will fail.
 
 ## Push
 
