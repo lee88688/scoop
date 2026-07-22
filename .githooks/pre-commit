@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+# Pre-commit: reject lines with trailing whitespace in staged text files.
+# Mirrors the "files have no lines containing trailing whitespace" Pester test
+# in Scoop-Bucket.Tests.ps1 so failures are caught locally before CI.
+
+staged=$(git diff --cached --name-only --diff-filter=ACM -- '*.json' '*.md' '*.ps1' '*.yml' '*.yaml' '*.sh' '*.template')
+[ -z "$staged" ] && exit 0
+
+errors=0
+while IFS= read -r file; do
+    if [ -f "$file" ] && matches=$(grep -nE ' +$' "$file"); then
+        echo "ERROR: trailing whitespace in $file:" >&2
+        echo "$matches" >&2
+        errors=1
+    fi
+done <<< "$staged"
+
+if [ $errors -ne 0 ]; then
+    echo "" >&2
+    echo "Commit rejected: fix trailing whitespace (run .\\bin\\formatjson.ps1 for manifests)." >&2
+fi
+
+exit $errors

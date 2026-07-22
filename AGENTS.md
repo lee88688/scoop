@@ -65,6 +65,17 @@ Per the official contributing guide:
 - **`architecture`**: mandatory unless the app provides _only_ a 32bit download.
 - **Portable config**: prefer `persist` for user data that should survive updates.
 
+## Pre-commit hook
+
+After cloning, enable the trailing-whitespace pre-commit hook once:
+
+```powershell
+git config core.hooksPath .githooks
+```
+
+This mirrors the `files have no lines containing trailing whitespace` Pester
+test so trailing-whitespace failures are caught locally instead of in CI.
+
 ## Push
 
 The `excavator` workflow auto-commits version bumps on GitHub on a schedule, so
