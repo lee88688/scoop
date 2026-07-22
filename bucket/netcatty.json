@@ -1,0 +1,36 @@
+{
+    "version": "1.1.70",
+    "description": "AI-powered SSH client, SFTP browser & terminal manager",
+    "homepage": "https://netcatty.app",
+    "license": "GPL-3.0-or-later",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/binaricat/Netcatty/releases/download/v1.1.70/Netcatty-1.1.70-win-x64.exe#/dl.7z",
+            "hash": "sha512:346a0d6cb52b3f10e615ad31ab76469a7bb56584b2a32276ea9104ef1ea5e9964655f428dbc8c052ff6a546e50ffaf3ca24cc3ae73dfb8cc24b8341a08dd7336",
+            "pre_install": [
+                "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
+                "Remove-Item \"$dir\\`$*\", \"$dir\\Uninst*\" -Recurse"
+            ]
+        }
+    },
+    "shortcuts": [
+        [
+            "Netcatty.exe",
+            "Netcatty"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/binaricat/Netcatty"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/binaricat/Netcatty/releases/download/v$version/Netcatty-$version-win-x64.exe#/dl.7z",
+                "hash": {
+                    "url": "$baseurl/latest.yml",
+                    "regex": "win-x64\\.exe[\\s\\S]*?sha512:\\s+$base64"
+                }
+            }
+        }
+    }
+}
