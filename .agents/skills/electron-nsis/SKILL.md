@@ -66,7 +66,7 @@ bucket (e.g. motrix, hyper, listen1desktop).
 - **`url`**: NSIS installer `.exe` with `#/dl.7z` suffix. The fragment makes
   Scoop save the download as `dl.7z` and extract it with 7-Zip instead of
   running the installer. The download hash still matches the original `.exe`.
-- **`pre_install`**: 
+- **`pre_install`**:
   - `Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"` —
     extracts the inner Electron app archive. Note the backtick before
     `` `$PLUGINSDIR ``: `$PLUGINSDIR` is a literal NSIS folder name, the
