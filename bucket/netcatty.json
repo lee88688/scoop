@@ -1,12 +1,12 @@
 {
-    "version": "1.1.75",
+    "version": "1.1.76",
     "description": "AI-powered SSH client, SFTP browser & terminal manager",
     "homepage": "https://netcatty.app",
     "license": "GPL-3.0-or-later",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/binaricat/Netcatty/releases/download/v1.1.75/Netcatty-1.1.75-win-x64.exe#/dl.7z",
-            "hash": "sha512:c828301fac191c84b7895e52d14374ef729125cb167b384e779f27816f5f95609c4abaa95771a733c076db8d237ddf80f21e82dfb1e6755cbaa46746d8b516fb",
+            "url": "https://github.com/binaricat/Netcatty/releases/download/v1.1.76/Netcatty-1.1.76-win-x64.exe#/dl.7z",
+            "hash": "sha512:6e8e3db9953570fdfdd137a8b8901a2f05e6a05538a370bc88c897e7b5cbaa7520f5ffa46334f1fd2eeadf5f11d91e11e7a202c13ea917d25b659ac994e31411",
             "pre_install": [
                 "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
                 "Remove-Item \"$dir\\`$*\", \"$dir\\Uninst*\" -Recurse"
