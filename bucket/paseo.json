@@ -1,0 +1,61 @@
+{
+    "version": "0.9.2",
+    "description": "Desktop client for orchestrating multiple coding agents (Claude Code, Codex, Copilot, OpenCode, Pi)",
+    "homepage": "https://paseo.sh",
+    "license": "Apache-2.0",
+    "notes": [
+        "Paseo runs a local daemon: the desktop app starts it automatically on launch.",
+        "At least one agent CLI (Claude Code, Codex, GitHub Copilot, OpenCode, Pi) must be installed and configured."
+    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/getpaseo/paseo/releases/download/v0.9.2/Paseo-Setup-0.9.2-x64.exe#/dl.7z",
+            "hash": "sha512:68e4f5ea92566cf0dbf89988b66f0131ef5d5e2fa5f5d917b36684f3138479c1ad739e0cf27f24fccf5d3c748273c9dadefad75788a5e43875dddcb2c38d84e0",
+            "pre_install": [
+                "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
+                "Remove-Item \"$dir\\`$*\", \"$dir\\Uninst*\" -Recurse"
+            ]
+        },
+        "arm64": {
+            "url": "https://github.com/getpaseo/paseo/releases/download/v0.9.2/Paseo-Setup-0.9.2-arm64.exe#/dl.7z",
+            "hash": "sha512:2a9a39cb3430831e950269a476a216254e3f73ac10e01dbd4a7244d89fc110c36697297ea4477524732655916d02c44539406490ef1689fd399f328e95121514",
+            "pre_install": [
+                "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-arm64.7z\" \"$dir\"",
+                "Remove-Item \"$dir\\`$*\", \"$dir\\Uninst*\" -Recurse"
+            ]
+        }
+    },
+    "bin": [
+        [
+            "resources\\bin\\paseo.cmd",
+            "paseo"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "Paseo.exe",
+            "Paseo"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/getpaseo/paseo"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/getpaseo/paseo/releases/download/v$version/Paseo-Setup-$version-x64.exe#/dl.7z",
+                "hash": {
+                    "url": "$baseurl/latest.yml",
+                    "regex": "-x64\\.exe[\\s\\S]*?sha512:\\s+$base64"
+                }
+            },
+            "arm64": {
+                "url": "https://github.com/getpaseo/paseo/releases/download/v$version/Paseo-Setup-$version-arm64.exe#/dl.7z",
+                "hash": {
+                    "url": "$baseurl/latest.yml",
+                    "regex": "-arm64\\.exe[\\s\\S]*?sha512:\\s+$base64"
+                }
+            }
+        }
+    }
+}
