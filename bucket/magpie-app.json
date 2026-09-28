@@ -4,7 +4,8 @@
     "homepage": "https://usemagpie.ai",
     "license": "MIT",
     "notes": [
-        "Runs in the system tray. The app also updates itself in the background (Restart to Update); prefer 'scoop update magpie-app' so Scoop's version bookkeeping stays correct.",
+        "Runs in the system tray. Shares settings, providers and profiles with magpie-cli in ~\\.config\\magpie; one magpie at a time serves the gateway on 127.0.0.1:3425.",
+        "The app also updates itself in the background (Restart to Update); prefer 'scoop update magpie-app' so Scoop's version bookkeeping stays correct.",
         "The Windows build is not code-signed: SmartScreen may warn on the first run."
     ],
     "architecture": {

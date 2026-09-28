@@ -3,7 +3,10 @@
     "description": "Terminal-only build of magpie: pick the model every AI coding agent uses - Claude Code, Codex, Gemini CLI and more - and run its local gateway",
     "homepage": "https://usemagpie.ai",
     "license": "MIT",
-    "notes": "No desktop app in this build; 'magpie tui' opens the terminal UI. The built-in 'magpie update' replaces this binary in place: prefer 'scoop update magpie-cli'.",
+    "notes": [
+        "Terminal-only build (no desktop app): 'magpie tui' is its UI. Shares settings, providers and profiles with magpie-app in ~\\.config\\magpie.",
+        "The built-in 'magpie update' replaces this binary in place: prefer 'scoop update magpie-cli'."
+    ],
     "architecture": {
         "64bit": {
             "url": "https://github.com/yetone/magpie-releases/releases/download/v0.1.305/magpie-cli-windows-amd64.exe#/magpie.exe",
