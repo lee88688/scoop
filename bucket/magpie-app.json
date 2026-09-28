@@ -1,0 +1,43 @@
+{
+    "version": "0.1.305",
+    "description": "Pick the model every AI coding agent uses - Claude Code, Codex, Gemini CLI and more - from the system tray",
+    "homepage": "https://usemagpie.ai",
+    "license": "MIT",
+    "notes": [
+        "Runs in the system tray. The app also updates itself in the background (Restart to Update); prefer 'scoop update magpie-app' so Scoop's version bookkeeping stays correct.",
+        "The Windows build is not code-signed: SmartScreen may warn on the first run."
+    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/yetone/magpie-releases/releases/download/v0.1.305/magpie-windows-amd64.exe#/magpie.exe",
+            "hash": "af7ecb5f58d743decb425fe65282b8e47d3013e3fa3eda7c5af395851ae427c5"
+        },
+        "arm64": {
+            "url": "https://github.com/yetone/magpie-releases/releases/download/v0.1.305/magpie-windows-arm64.exe#/magpie.exe",
+            "hash": "9a03d872dd81c502e4b76ce204a755cc6197c854f442457c374782b630f3afc5"
+        }
+    },
+    "shortcuts": [
+        [
+            "magpie.exe",
+            "magpie"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/yetone/magpie-releases"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/yetone/magpie-releases/releases/download/v$version/magpie-windows-amd64.exe#/magpie.exe"
+            },
+            "arm64": {
+                "url": "https://github.com/yetone/magpie-releases/releases/download/v$version/magpie-windows-arm64.exe#/magpie.exe"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/SHA256SUMS",
+            "regex": "($sha256)\\s+$basename"
+        }
+    }
+}
