@@ -1,5 +1,5 @@
 {
-    "version": "0.1.1958",
+    "version": "0.1.1997",
     "description": "Terminal-only build of magpie: pick the model every AI coding agent uses - Claude Code, Codex, Gemini CLI and more - and run its local gateway",
     "homepage": "https://usemagpie.ai",
     "license": "MIT",
@@ -9,12 +9,12 @@
     ],
     "architecture": {
         "64bit": {
-            "url": "https://github.com/yetone/magpie-releases/releases/download/v0.1.1958/magpie-cli-windows-amd64.exe#/magpie.exe",
-            "hash": "0333746a6a5ba6102f59fab525331e3044f4db1a2b81342613b76dc4196f4ab6"
+            "url": "https://github.com/yetone/magpie-releases/releases/download/v0.1.1997/magpie-cli-windows-amd64.exe#/magpie.exe",
+            "hash": "9ace52ed49f0c78c319ac2e95cfe90f7186716f9f80c03f99dfd17b8dcd5f7f4"
         },
         "arm64": {
-            "url": "https://github.com/yetone/magpie-releases/releases/download/v0.1.1958/magpie-cli-windows-arm64.exe#/magpie.exe",
-            "hash": "a59d36c96b7618850741b11e08d60317b015f96eb6f5aee20633b34397e0cc60"
+            "url": "https://github.com/yetone/magpie-releases/releases/download/v0.1.1997/magpie-cli-windows-arm64.exe#/magpie.exe",
+            "hash": "b6c7472af7341071222c927871e7e5c440668e3139704b47ef126639ec2af562"
         }
     },
     "bin": "magpie.exe",
