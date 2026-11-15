@@ -1,5 +1,5 @@
 {
-    "version": "0.1.4224",
+    "version": "0.1.4244",
     "description": "Pick the model every AI coding agent uses - Claude Code, Codex, Gemini CLI and more - from the system tray",
     "homepage": "https://usemagpie.ai",
     "license": "MIT",
@@ -10,12 +10,12 @@
     ],
     "architecture": {
         "64bit": {
-            "url": "https://github.com/yetone/magpie-releases/releases/download/v0.1.4224/magpie-windows-amd64.exe#/magpie.exe",
-            "hash": "efe7e4bd1dc755d01c454ddb5ab116a7f2eb8fafe0683e8f09f7fbae1f101e7d"
+            "url": "https://github.com/yetone/magpie-releases/releases/download/v0.1.4244/magpie-windows-amd64.exe#/magpie.exe",
+            "hash": "269f87ed7fec94bf18ca0f920c9940a5876fa446d913ad8c03e001e99b879fe7"
         },
         "arm64": {
-            "url": "https://github.com/yetone/magpie-releases/releases/download/v0.1.4224/magpie-windows-arm64.exe#/magpie.exe",
-            "hash": "27638ae968778feace69c9b5415c9ef119011cffa3e4afba91fa7620935e43bf"
+            "url": "https://github.com/yetone/magpie-releases/releases/download/v0.1.4244/magpie-windows-arm64.exe#/magpie.exe",
+            "hash": "4b4cd8dd11df930d59bd3b7299ce3b422b5016ead055a178e4274d17a163754f"
         }
     },
     "shortcuts": [
