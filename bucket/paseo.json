@@ -1,5 +1,5 @@
 {
-    "version": "0.17.5",
+    "version": "0.18.0",
     "description": "Desktop client for orchestrating multiple coding agents (Claude Code, Codex, Copilot, OpenCode, Pi)",
     "homepage": "https://paseo.sh",
     "license": "Apache-2.0",
@@ -9,16 +9,16 @@
     ],
     "architecture": {
         "64bit": {
-            "url": "https://github.com/getpaseo/paseo/releases/download/v0.17.5/Paseo-Setup-0.17.5-x64.exe#/dl.7z",
-            "hash": "sha512:03d05d416513b9c7a668e8a6becc03ae732241ac71abfa6132939b75ce8359b289e6dab36f32493634b089e7a86c9d6ee530d5ed51262e2e27cef3105fc2344f",
+            "url": "https://github.com/getpaseo/paseo/releases/download/v0.18.0/Paseo-Setup-0.18.0-x64.exe#/dl.7z",
+            "hash": "sha512:87164ce7afd112fc17eab6d0f4d8a49daa9e90029d9facc2e558e5a39a020df7bc09866979b3d8a1cffc4f885d9ba0b00bd9afeb05e71c65adbec718b74a89b8",
             "pre_install": [
                 "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
                 "Remove-Item \"$dir\\`$*\", \"$dir\\Uninst*\" -Recurse"
             ]
         },
         "arm64": {
-            "url": "https://github.com/getpaseo/paseo/releases/download/v0.17.5/Paseo-Setup-0.17.5-arm64.exe#/dl.7z",
-            "hash": "sha512:1f3fde684df4e0bae92433eb8c7fd240dc54bc096d5098ce2611d2cb75ce3f2569070ffb48ecf2255eb82f5cbbfc4889f3ff98f5c4e6a69d63a029f3a2a167d7",
+            "url": "https://github.com/getpaseo/paseo/releases/download/v0.18.0/Paseo-Setup-0.18.0-arm64.exe#/dl.7z",
+            "hash": "sha512:129ec457f483aa01aabadeedc2ae267c1162465ee8eb0e28e795cb36f6b0f33360313d2462a8b9f2502306fcbbdc335ba0ed2c8ea9b19f26363a590555d05a21",
             "pre_install": [
                 "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-arm64.7z\" \"$dir\"",
                 "Remove-Item \"$dir\\`$*\", \"$dir\\Uninst*\" -Recurse"
